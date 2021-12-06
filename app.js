@@ -104,6 +104,30 @@ searchTxt.addEventListener("input", function () {
 })
 
 
+// Dark Mode Functionality
+
+let darkMode = document.getElementById('darkMode');
+
+darkMode.addEventListener('click', function (e) {
+    let myHeading = document.getElementById('myHeading');
+    let myNotes = document.getElementById('myNotes');
+    let body = document.querySelector('body');
+    let str = darkMode.innerText;
+    if (str.includes('Dark Mode')) {
+        myHeading.style.color = "white";
+        myNotes.style.color = "white";
+        body.style.backgroundColor = "black";
+        darkMode.innerText = 'Lite Mode';
+    }
+    else {
+        body.style.backgroundColor = "White";
+        darkMode.innerText = "Dark Mode";
+        myHeading.style.color = "Black";
+        myNotes.style.color = "Black";
+    }
+})
+
+
 
 // Further Features
 
